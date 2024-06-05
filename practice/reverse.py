@@ -7,7 +7,7 @@ def reverse(s:str):
     return {"reversed":text, "vowel count":vowels}
 
 def isVowel(c:chr):
-   return (str(c) == 'a' or str(c) == 'A'
+    return (str(c) == 'a' or str(c) == 'A'
             or str(c) == 'e' or str(c) == 'E'
             or str(c) == 'i' or str(c) == 'I'
             or str(c) == 'o' or str(c) == 'O'
