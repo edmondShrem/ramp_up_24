@@ -13,12 +13,12 @@ def getBook(id:int):
     return fakeDatabase[id]
 
 @app.post("/books/")
-def addBook(id, title, author, year):
-    fakeDatabase[id] = {"id":id, "Title":title, "author":author, "year": year}
+def addBook(title, author, year):
+    fakeDatabase[len(fakeDatabase + 1)] = {"id":id, "Title":title, "author":author, "year": year}
     return fakeDatabase[id]
 
 @app.put("/books/{id}")
-def updtadeBook(id, title, author, year):
+def updtadeBook(title, author, year):
     if not fakeDatabase.keys().__contains__(id):
          return "that book doesn't exist, silly :P"
     fakeDatabase[id]["Title"] = title
